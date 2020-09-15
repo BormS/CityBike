@@ -1,0 +1,35 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Metrics{% endblock %}
+
+{% block content %}
+    <img class="img-responsive"  src="{{ url_for('static', filename = 'header.jpg') }}"/>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <h1 class="text-center" style="magrin-top:1000px">METRICS</h1>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in range(0, len) %}
+                        <tr>
+                            <th>{{ i }}</th>
+                            <th>{{ metrics[i] }}</th>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            <a href="metrics" class="btn btn-info center-block" role="button">Go into details</a>
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+
+    </div>
+
+{% endblock %}

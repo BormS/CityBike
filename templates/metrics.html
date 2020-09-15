@@ -1,0 +1,55 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Analysis{% endblock %}
+
+{% block content %}
+    <img class="img-responsive" src="{{ url_for('static', filename = 'header.jpg') }}"/>
+    <div class="container">
+        <div class="row" style="margin-top: 50px">
+            <h1>Duration and number of the trips per month</h1>
+            <div class="col-lg-7">
+                <img class="img-responsive" src="{{ url_for('static', filename = 'per_month.png') }}"/>
+            </div>
+            <div class="col-lg-5" style="margin-top: 10%">City Bike provides data of bicycles usage in New-York.
+                The usage of the bikes and the duration of the trips in summer months is about twice higher than in
+                winter ones.
+
+            </div>
+        </div>
+        <div class="row" style="margin-top: 50px">
+            <h1>Duration and number of the trips per weekday</h1>
+            <div class="col-lg-7">
+                <img class="img-responsive" src="{{ url_for('static', filename = 'per_weekday.png') }}"/>
+            </div>
+            <div class="col-lg-5" style="margin-top: 10%">The number of trips is rapidly falling for the weekend.
+                Probably, the major part of the traffic falls on those who use bikes to go to work or school.
+                Though, on weekend the duration of the trips is about 1.5 longer.
+
+            </div>
+        </div>
+        <div class="row" style="margin-top: 50px">
+            <h1>Duration and number of the trips by days</h1>
+            <div class="col-lg-7">
+                <img class="img-responsive" src="{{ url_for('static', filename = 'per_day.png') }}"/>
+            </div>
+            <div class="col-lg-5" style="margin-top: 10%"> Overall, the trend of number of trips is increasing.
+                Over 4 years the average number of trips has increased by about 250 trips per day (from 750 to 1000).
+                Due to the Covid-19 pandemic and self-isolation, people started massively useing bicycles
+                as substitute for public transport and as workout.</div>
+        </div>
+        <div class="row" style="margin-top: 50px; margin-bottom: 50px">
+             <h1>Number of bikes</h1>
+            <div class="col-lg-7">
+                <img class="img-responsive" src="{{ url_for('static', filename = 'bicycles.png') }}"/>
+            </div>
+            <div class="col-lg-5" style="margin-top: 5%">To provide necessary number of bicyckes it is important to
+            look back on the statistics and to see the number of bikes that were used during previous years.
+                This understanding can help City Bike to avoid the lack of the bikes during pick hours/days/months
+                andThe provide just enough of them in less popular seasons. The diagram
+                illustrates the number of unique bikes that were used per day and the number of completed trips.
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
